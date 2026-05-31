@@ -98,7 +98,7 @@ func loadConfig() {
 	)
 
 	// Load Optional
-	OwnerID = getInt64("OWNER_ID", 0)
+	OwnerID = getInt64("7068148220", 0)
 	SpotifyClientID = getString("SPOTIFY_CLIENT_ID", "")
 	SpotifyClientSecret = getString("SPOTIFY_CLIENT_SECRET", "")
 	ArcAPIURL = getString("ARC_API_URL", "https://api.arcmusic.fun")
@@ -108,19 +108,19 @@ func loadConfig() {
 	DurationLimit = int(getInt64("DURATION_LIMIT", 3600)) // In seconds
 	LeaveOnDemoted = getBool("LEAVE_ON_DEMOTED", false)
 	QueueLimit = int(getInt64("QUEUE_LIMIT", 10))
-	SupportChat = getString("SUPPORT_CHAT", "https://t.me/ArcChatz")
-	SupportChannel = getString("SUPPORT_CHANNEL", "https://t.me/ArcUpdates")
+	SupportChat = getString("SUPPORT_CHAT", "https://t.me/+1MuHO3gU07ZkNDBl")
+	SupportChannel = getString("SUPPORT_CHANNEL", "https://t.me/annyxmusic")
 	CookiesLink = getString("COOKIES_LINK", "")
 	SetCmds = getBool("SET_CMDS", true)
 	MaxAuthUsers = int(getInt64("MAX_AUTH_USERS", 25))
 
 	StartImage = getString(
 		"START_IMG_URL",
-		"https://files.catbox.moe/ti82r1.jpg",
+		"https://image-link.edgeone.app/1780208383477-1h5kuq.jpg",
 	)
 	PingImage = getString(
 		"PING_IMG_URL",
-		"https://files.catbox.moe/po9y7v.jpg",
+		"https://image-link.edgeone.app/1780207767834-u1k7jn.jpg",
 	)
 	Port = getString("PORT", "8000")
 }
