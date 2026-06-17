@@ -50,12 +50,9 @@ func startHandler(m *tg.NewMessage) error {
 
 	default:
 		// ========== Heart Reaction ==========
-		_, err := m.React(tg.ReactionEmoji{
+		m.React(tg.ReactionEmoji{
 			Emoticon: "❤️",
 		})
-		if err != nil {
-			gologging.Error("[start] Failed to send heart reaction: " + err.Error())
-		}
 
 		// ========== Animated Welcome Text Sequence ==========
 		animations := []string{
@@ -66,6 +63,7 @@ func startHandler(m *tg.NewMessage) error {
 		}
 
 		var animMsg *tg.NewMessage
+		var err error
 		for i, animText := range animations {
 			if i == 0 {
 				animMsg, err = m.Reply(animText)
@@ -86,11 +84,7 @@ func startHandler(m *tg.NewMessage) error {
 
 		// ========== Sticker with 3s auto-delete ==========
 		stickerID := "CAACAgEAAxkBAAERZ0NqMlGDnVBT_h1vm1qbL3Fe8_qjigACVAYAAlmWeUd1rCk8DBvZdjwE"
-		stickerMsg, stickerErr := m.Client.SendMessage(m.ChatID(), &tg.MessageMedia{
-			Document: &tg.Document{
-				ID: stickerID,
-			},
-		})
+		stickerMsg, stickerErr := m.Client.SendSticker(m.ChatID(), stickerID)
 		if stickerErr != nil {
 			gologging.Error("[start] Failed to send sticker: " + stickerErr.Error())
 		} else {
@@ -104,7 +98,7 @@ func startHandler(m *tg.NewMessage) error {
 		// Small delay before showing main menu
 		time.Sleep(500 * time.Millisecond)
 
-		// ========== Main welcome menu (FORWARDING ENABLED) ==========
+		// ========== Main welcome menu ==========
 		caption := F(m.ChannelID(), "start_private", locales.Arg{
 			"user": utils.MentionHTML(m.Sender),
 			"bot":  utils.MentionHTML(m.Client.Me()),
@@ -115,7 +109,7 @@ func startHandler(m *tg.NewMessage) error {
 			ForceLargeMedia: true,
 		}, &tg.MediaOptions{
 			Caption:     caption,
-			NoForwards:  false, // ✅ CHANGED: Now users CAN forward/share
+			NoForwards:  false,
 			ReplyMarkup: core.GetStartMarkup(m.ChannelID()),
 		})
 		if err != nil {
@@ -125,7 +119,7 @@ func startHandler(m *tg.NewMessage) error {
 
 			_, err = m.RespondMedia(config.StartImage, &tg.MediaOptions{
 				Caption:     caption,
-				NoForwards:  false, // ✅ CHANGED: Now users CAN forward/share
+				NoForwards:  false,
 				ReplyMarkup: core.GetStartMarkup(m.ChannelID()),
 			})
 			if err != nil {
@@ -134,7 +128,7 @@ func startHandler(m *tg.NewMessage) error {
 				)
 
 				_, err = m.Respond(caption, &tg.SendOptions{
-					NoForwards:  false, // ✅ CHANGED: Now users CAN forward/share
+					NoForwards:  false,
 					ReplyMarkup: core.GetStartMarkup(m.ChannelID()),
 				})
 				return err
@@ -172,7 +166,7 @@ func startCB(cb *tg.CallbackQuery) error {
 
 	sendOpt := &tg.SendOptions{
 		ReplyMarkup: core.GetStartMarkup(cb.ChannelID()),
-		NoForwards:  false, // ✅ CHANGED: Now users CAN forward/share
+		NoForwards:  false,
 	}
 
 	if config.StartImage != "" {
