@@ -116,11 +116,11 @@ func loadConfig() {
 
 	StartImage = getString(
 		"START_IMG_URL",
-		"https://quixotic-peach-pdoxbtpv.edgeone.app/Effortlessly%20stylish%20girl%20capturing%20the%20perfect….jpg",
+		"https://files.catbox.moe/g28d5n.jpg",
 	)
 	PingImage = getString(
 		"PING_IMG_URL",
-		"https://quixotic-peach-pdoxbtpv.edgeone.app/Effortlessly%20stylish%20girl%20capturing%20the%20perfect….jpg",
+		"https://files.catbox.moe/g28d5n.jpg",
 	)
 	Port = getString("PORT", "8000")
 }
