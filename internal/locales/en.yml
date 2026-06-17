@@ -4,16 +4,16 @@ name: "🇺🇸 English"
 CONFIRM_RESUME_BTN: "▶️ Resume"
 CONFIRM_UNMUTE_BTN: "🔊 Unmute"
 CONFIRM_STOP_BTN: "⏹️ Stop"
-ADD_ME_BTN: "✨ Add Me to Your Group"
+ADD_ME_BTN: "Add Me to Your group"
 BROADCAST_CANCEL_BTN: "🚫 Cancel Broadcast"
 CLOSE_BTN: "Close"
 DOWNLOAD_CANCEL_BTN: "🚦 Cancel Downloading"
 GC_HELP_BTN: "📒 Commands"
 
-START_HELP_BTN: "📚 Help & Commands"
-SOURCE_BTN: "💻 Source Code"
-UPDATES_BTN: "📢 Updates"
-SUPPORT_BTN: "🆘 Support"
+START_HELP_BTN: "Help & Commands"
+SOURCE_BTN: "Source"
+UPDATES_BTN: "Updates"
+SUPPORT_BTN: "Support"
 
 HELP_ADMINS_BTN: "🛠 Admins"
 HELP_PUBLIC_BTN: "🌍 Public"
@@ -25,8 +25,8 @@ BACK_BTN: "⬅️ Back"
 # basically this string used in /command [bool]
 invalid_bool: "⚠️ <b>Invalid value.</b>\nUse 'enable' or 'disable'."
 
-active_chats_info: "📊 <b>Active Chats:</b>\n\n✨ <b>Anny X Music</b> is currently active in <b>{count}</b> chats across the platform."
-active_chats_info_with_broken: "📊 <b>Active Chats:</b>\n\n✨ <b>Anny X Music</b> is active in <b>{count}</b> chats, but <b>{broken}</b> of them may have display issues."
+active_chats_info: "📊 <b>Active Chats:</b>\n\nThere are {count} active chats across the bot system."
+active_chats_info_with_broken: "📊 <b>Active Chats:</b>\n\nThere are {count} active chats across the bot system, but {broken} of them may have issues displaying correctly."
 
 
 # 🚫 Assistant Restricted / Banned
@@ -53,42 +53,31 @@ addauth_success_with_count: "✅ Added {user}.\nNow {count}/{limit} authorized u
 addauth_success: "✅ Successfully added {user} to the authorized users list."
 
 # 🤖 Bot Added to Chat
-bot_added_normal: |
-  🎵 <b>Thanks for adding me to the group!</b>
-
-  I'm <b>Anny X Music</b> — your ultimate music companion powered by @Mad_x_Avi.
-
-  🎧 Use <code>/play [song name]</code> to start playing music instantly.
-  📚 Use <code>/help</code> to explore all my commands.
-
-  Let's vibe together! 🎶
+bot_added_normal: "🎵 Thanks for adding me! Use /play [song] to start playing music."
 
 # 🛠️ Bot Added During Maintenance
-bot_added_maintenance: |
-  ⚠️ <b>Anny X Music</b> is currently under maintenance and will be back soon!
-
-  Thank you for your patience. We're making things even better for you ⏰
+bot_added_maintenance: "⚠️ I'm currently under maintenance and will be back soon. Thanks for your patience! ⏰"
 maint_reason_generic: "<i>📝 Reason: {reason}</i>"
 
 # ⚠️ Bot Demotion
 bot_demotion_goodbye: |
   <b>⚠️ Permission Lost</b>
 
-  I’ve been <b>demoted from admin</b> in this chat.
-  Without proper admin rights, <b>Anny X Music</b> can't function here, so I’ll be leaving now.
+  I’ve been <b>demoted from admin</b> and can’t perform my tasks anymore.
+  Without proper rights, I’m unable to function here, so I’ll be <i>leaving the chat now</i>.
 
   <b>Goodbye 👋</b>
 
-broadcast_already_running: "⚠️ A broadcast is already in progress.\n\nPlease wait for it to complete or cancel it first:\n• <code>/broadcast -cancel</code>\n• Or click the Cancel button below"
+broadcast_already_running: "⚠️ A broadcast is already running.\n\nPlease wait for it to complete or cancel it first using:\n• <code>/broadcast -cancel</code>\n• Or click the Cancel button on the progress message"
 broadcast_parse_failed: "❌ Failed to parse broadcast command:\n<code>{error}</code>"
-broadcast_no_content: "⚠️ No content provided for broadcast.\n\n<b>Usage:</b> <code>{cmd} [text or reply to message]</code>\n\n<b>Example:</b>\n<code>{cmd} Hello from Anny X Music family! 🎵</code>"
+broadcast_no_content: "⚠️ No content provided for broadcast.\n\n<b>Usage:</b> <code>{cmd} [text or reply to message]</code>\n\n<b>Example:</b>\n<code>{cmd} Hello everyone!</code>"
 broadcast_fetch_chats_failed: "❌ Failed to fetch served chats:\n<code>{error}</code>"
 broadcast_fetch_users_failed: "❌ Failed to fetch served users:\n<code>{error}</code>"
 broadcast_no_targets: "⚠️ No targets found for broadcast.\n\nMake sure you haven't excluded all targets with flags."
-broadcast_initializing: "📡 <b>Initializing broadcast...</b>\n\n✨ Preparing to send your message across <b>Anny X Music's</b> network. Please wait..."
-broadcast_cancelled_header: "🚫 <b>Broadcast Cancelled</b>"
-broadcast_completed_header: "✅ <b>Broadcast Completed</b>"
-broadcast_progress_header: "📡 <b>Broadcasting...</b>\n\nSpreading the message across the network 🌐"
+broadcast_initializing: "📡 Initializing broadcast...\n\nPlease wait..."
+broadcast_cancelled_header: "🚫 Broadcast Cancelled"
+broadcast_completed_header: "✅ Broadcast Completed"
+broadcast_progress_header: "📡 Broadcasting..."
 broadcast_total_chats: "📊 Total Chats: {done}/{total} ({progress}%)"
 broadcast_total_users: "👥 Total Users: {done}/{total} ({progress}%)"
 broadcast_failed_chats: "❌ Failed Chats: {count}"
@@ -99,7 +88,7 @@ broadcast_eta: "⏳ ETA: {eta}"
 broadcast_success_rate: "✨ Success Rate: {rate}% ({sent}/{total})"
 broadcast_not_running: "ℹ️ No broadcast is currently running."
 broadcast_cancel_success: "🚫 Broadcast cancelled successfully."
-broadcast_cancel_owner_only: "⚠️ Only the owner (@Mad_x_Avi) can cancel broadcasts."
+broadcast_cancel_owner_only: "⚠️ Only the owner can cancel broadcasts."
 broadcast_cancel_none_running: "ℹ️ No broadcast is currently running."
 broadcast_cancel_done: "🚫 Broadcast cancelled."
 
@@ -197,7 +186,7 @@ enabled: "Enabled"
 disabled: "Disabled"
 
 bug_usasge: "⚠️ Please describe the bug. Usage: {cmd} <problem> or reply to a message."
-bug_thanks: "✅ Thank you for your bug report! It has been forwarded to @Mad_x_Avi and the dev team."
+bug_thanks: "✅ Thank you for your bug report! It has been sent to the developers."
 
 bug_report_format: |
   <b>🐞 New Bug Report</b>
@@ -232,7 +221,7 @@ err_assistant_get_failed: |
 
   <b>➡️ Please retry your command.</b>
 
-  If this keeps happening, please contact @Mad_x_Avi for support.
+  If this keeps happening, please contact support so we can assist you.
   
 err_assistant_join_rate_limited: |
   ⚠️ Assistant cannot join this chat because it has reached the maximum number of allowed groups.
@@ -298,7 +287,7 @@ flood_seconds: "⏳ Slow down! Try again in {duration} seconds."
 flood_minutes: "⏳ Please wait {duration} minutes before using this command again."
 
 help_private_only: "🤖 Hi! For bot help and commands, please DM me directly — I'm more responsive in private chats!"
-help_main: "📚 <b>Anny X Music Help Menu</b>\n\nSelect a category below to explore detailed commands and their usage for managing, controlling, and customizing the bot.\n\n<b>Owner:</b> @Mad_x_Avi"
+help_main: "📚 <b>Help Menu</b>\n\nSelect a category below to explore detailed commands and their usage for managing, controlling, and customizing the bot."
 
 jump_no_active: "⚠️ No active track to jump within."
 jump_usage: "⚠️ Please provide seconds.\nExample: <code>{cmd} 120</code>"
@@ -316,7 +305,7 @@ logger_playback_started: "Playback Started"
 logger_playback_queued: "Playback Queued"
 
 logger_bot_added: |
-  🤖 <b>Anny X Music Added to New Group</b>
+  🤖 <b>Bot Added to New Group</b>
   
   <b>Group Name:</b> {group_name}
   <b>Group ID:</b> {group_id}
@@ -329,7 +318,7 @@ logger_bot_added: |
 
 logger_bot_removed: |
 
-  🤖 <b>Anny X Music Removed from Group</b>
+  🤖 <b>Bot Removed from Group</b>
 
   <b>Group Name:</b> {group_name}
   <b>Group ID:</b> {group_id}
@@ -341,7 +330,7 @@ logger_bot_removed: |
 
   
 logger_bot_started: |
-  ▶️ <b>{mention} started Anny X Music</b>
+  ▶️ <b>{mention} started the bot</b>
 
   <b>Username:</b> {user_username}
   <b>ID:</b> {user_id}
@@ -383,7 +372,7 @@ logs_old_caption: "📋 <b>Oldest Log Lines</b>\n\nShowing first {count} lines f
 logs_cleared: "✅ <b>Log File Cleared</b>\n\nSuccessfully cleared the log file.\n<b>Previous Size:</b> {size_mb} MB"
 
 # reason - if maintenance reason available so at the place of {reason} the maint_reason will provided
-maint: "⚠️ <b>Anny X Music</b> is under maintenance at the moment and temporarily unavailable. Please check back later.\n\n{reason}"
+maint: "⚠️ I'm under maintenance at the moment and temporarily unavailable. Please check back later.\n\n{reason}"
 maint_reason: "<i>📝 Reason: {reason}</i>"
 
 # ⚙️ Maintenance control
@@ -453,8 +442,8 @@ only_admin: "⚠️ <b>Permission Denied!</b>\nOnly <b>admins</b> can control th
 only_admin_or_auth: "⚠️ <b>Access Denied</b>\nOnly <b>admins</b> or <b>authorized users</b> can control this actions.\n\nIf you recently became an admin, use /reload to refresh your permissions."
 only_admin_or_auth_cb: "⚠️ Only admins can do this actions."
 only_supergroup: "⚠️ This command can only be used in groups."
-only_owner: "⚠️ Only the bot owner (@Mad_x_Avi) can use this command."
-only_sudo: "⚠️ Only sudo users or @Mad_x_Avi can use this command."
+only_owner: "⚠️ Only the bot owner can use this command."
+only_sudo: "⚠️ Only sudo users or the bot owner can use this command."
 
 pause_invalid_duration: "⚠️ Invalid duration for auto-resume.\nIt must be between <b>5</b> and <b>3600</b> seconds."
 pause_invalid_format: "⚠️ Invalid format.\nUse: <code>/{cmd} 30</code> or <code>/{cmd} 30s</code>"
@@ -516,7 +505,7 @@ ping_start: "🏓 Pinging..."
 ping_result: |
   <b>🏓 PONG</b>: <code>{latency}ms</code>
   
-  <b><u>🤖 Anny X Music System Status:</u></b>
+  <b><u>🤖 {bot} system stat's :</u></b>
   
   <b>Uptime:</b> {uptime}
   <b>RAM Usage:</b> {ram_info}
@@ -530,7 +519,7 @@ position_now: |
 
 queue_limit_reached: "⚠️ Queue limit reached ({limit} tracks max). Use /clear to clear queue."
 queue_no_active: "⚠️ <b>No active playback.</b>\n\nNothing is queued right now."
-queue_header: "🎶 <b>Anny X Music Queue</b>"
+queue_header: "🎶 <b>Current Queue</b>"
 queue_now_playing: "▶️ <b>Now Playing:</b>"
 queue_up_next: "⏭️ <b>Up Next:</b>"
 queue_more_line: "\n… and {remaining} more"
@@ -589,7 +578,7 @@ resume_success: |
 restart: "♻️ Restarting..."
 restart_exepath_fail: "❌ Failed to get executable path: {error}"
 restart_symlink_fail: "❌ Failed to resolve executable path: {error}"
-restart_service: "✨ <b>Anny X Music</b> has just restarted. Sorry for the issues.\n\nStart playing again after 10–15 seconds."
+restart_service: "{bot} has just restarted. Sorry for the issues.\n\nStart playing again after 10–15 seconds."
 restart_initiated: "✅ Restart initiated successfully!"
 restart_fail: "❌ Failed to restart: {error}"
 
@@ -784,7 +773,7 @@ stats_served_users_err: "• Users: <code>Error: {error}</code>"
 
 
 sudo_owner_self: "😂 Haha, you’re the boss already! Why are you even trying to add yourself?"
-sudo_bot_self: "🤖 Haha, I’m Anny X Music! I can’t add myself to the sudo list — even @Mad_x_Avi can't cheat me 😎"
+sudo_bot_self: "🤖 Haha, I’m the bot! I can’t add myself to the sudo list — even the owner can’t cheat me 😎"
 sudo_bot_user: "🤖 You can’t add a bot to the sudo list — sudoers must be human!"
 
 sudo_fetch_user_fail: "❌ Failed to fetch user info. Maybe the user is inaccessible.\n<i>{error}</i>"
@@ -794,7 +783,7 @@ sudo_add_fail: "❌ Failed to add sudo: <i>{error}</i>"
 sudo_add_success: "✅ Added {user} (<code>{id}</code>) to sudoers."
 sudo_assistant_self: "🤖 The assistant is always in the sudo list by default — it cannot be added again."
 
-sudo_owner_remove_block: "😎 Nice try! You can’t remove @Mad_x_Avi — they’re untouchable."
+sudo_owner_remove_block: "😎 Nice try! You can’t remove the owner — they’re untouchable."
 sudo_assistant_cannot_remove: "🤖 The assistant is required and cannot be removed from the sudo list."
 sudo_not_exists: "⚠️ User {user} (<code>{id}</code>) is not a sudoer."
 sudo_remove_fail: "❌ Failed to remove sudo: <i>{error}</i>"
@@ -802,8 +791,8 @@ sudo_remove_success: "🗑️ Removed {user} (ID: <code>{id}</code>) from sudoer
 
 sudo_list_fetching: "⏳ Fetching sudoers list..."
 sudo_list_fetch_fail: "❌ Failed to get sudoers: <code>{error}</code>"
-sudo_list_header: "👑 <b>Anny X Music Sudoers:</b>"
-sudo_list_owner: "{index}. {user} — <b>Owner (@Mad_x_Avi)</b>"
+sudo_list_header: "👑 <b>Current Sudoers:</b>"
+sudo_list_owner: "{index}. {user} — <b>Owner</b>"
 sudo_list_entry: "{index}. {user}"
 sudo_list_no_extra: "⚠️ No additional sudoers found."
 
@@ -899,19 +888,9 @@ spt_result: |
   Download: <code>{dl_mbps} Mbps</code>
   Upload: <code>{ul_mbps} Mbps</code>
 
-start_private: |
-  ✨ <b>Welcome to Anny X Music, {user}!</b>
+start_private: "Hello {user}, My name is {bot}.\n\nI'm a telegram streaming bot with some useful features. Supporting platforms like Youtube, Spotify, JioSaavn, Soundcloud etc.\n\nFeel free to add me to your groups."
 
-  I'm your ultimate Telegram music streaming bot, packed with powerful features to elevate your listening experience.
-
-  🎵 <b>Supported Platforms:</b> YouTube, Spotify, JioSaavn, SoundCloud, and more!
-  ⚡ <b>Features:</b> Crystal-clear audio, queue management, speed controls, and RTMP streaming.
-
-  👨‍💻 <b>Owner:</b> @Mad_x_Avi
-
-  <i>Feel free to add me to your groups and let the music play! 🎶</i>
-
-start_group: "<b>💫 Anny X Music is here!</b> Ready to rock this group? Try <code>/play [song name]</code> to get started 🎧"
+start_group: "<b>💫 I’m here!</b> Try a command… if you think you can handle me 😉"
 
 stream_channelid_fail: "⚠️ Failed to get your connected channel’s ID."
 stream_queue_finished: "No more songs in the queue."
@@ -926,8 +905,8 @@ stream_now_playing: |
   <b>Requested by:</b> {by}
 
 
-sudo_join_owner: "👑 {user} — owner of Anny X Music — just entered the chat."
-sudo_join_sudo: "🛡️ {user}, a sudo user of Anny X Music, just joined the chat."
+sudo_join_owner: "👑 {user} — owner of {bot} — just entered the chat."
+sudo_join_sudo: "🛡️ {user}, a sudo user of {bot}, just joined the chat."
 
 supergroup_needed: |
   This chat (ID: <code>{chat_id}</code>) is not a supergroup yet.
@@ -951,7 +930,7 @@ unmute_success: |
 help_owner: |
   👑 <b>Owner Commands</b>
 
-  Exclusive tools for @Mad_x_Avi to manage sudoers, execute system code, and perform bot administration securely.
+  Exclusive tools for managing sudoers, executing system code, and performing bot administration securely.
 
   <b>Commands:</b>
   <b>/addsudo</b> - Add a new user to bot's sudolist
@@ -1015,4 +994,4 @@ help_public: |
   <b>/reload</b> - Reload admin or cache data
   <b>/json</b> - Show message JSON structure
   <b>/sudolist</b> - View sudo user list
-  <b>/privacy</b> - Open privacy policy
+  <b>/privacy<b> - open privacy policy
