@@ -1,8 +1,8 @@
 /*
- * ● ArcMusic
+ * ● Anny X Music
  * ○ A high-performance engine for streaming music in Telegram voicechats.
  *
- * Copyright (C) 2026 Team Arc
+ * Copyright (C) 2026 @Mad_x_Avi
  */
 
 package config
@@ -98,7 +98,7 @@ func loadConfig() {
 	)
 
 	// Load Optional
-	OwnerID = getInt64("8756170914", 0)
+	OwnerID = getInt64("OWNER_ID", 8756170914) // ✅ FIXED: @Mad_x_Avi
 	SpotifyClientID = getString("SPOTIFY_CLIENT_ID", "")
 	SpotifyClientSecret = getString("SPOTIFY_CLIENT_SECRET", "")
 	ArcAPIURL = getString("ARC_API_URL", "https://api.arcmusic.fun")
