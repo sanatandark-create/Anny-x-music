@@ -108,7 +108,7 @@ func loadConfig() {
 	DurationLimit = int(getInt64("DURATION_LIMIT", 3600)) // In seconds
 	LeaveOnDemoted = getBool("LEAVE_ON_DEMOTED", false)
 	QueueLimit = int(getInt64("QUEUE_LIMIT", 10))
-	SupportChat = getString("SUPPORT_CHAT", "https://t.me/+1MuHO3gU07ZkNDBl")
+	SupportChat = getString("SUPPORT_CHAT", "https://t.me/+R62hfuryQvZlYzE9")
 	SupportChannel = getString("SUPPORT_CHANNEL", "https://t.me/annyxmusic")
 	CookiesLink = getString("COOKIES_LINK", "")
 	SetCmds = getBool("SET_CMDS", true)
