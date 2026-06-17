@@ -82,21 +82,6 @@ func startHandler(m *tg.NewMessage) error {
 			m.Client.DeleteMessages(m.ChatID(), []int32{animMsg.ID})
 		}
 
-		// Sticker (shows for 3 seconds then vanishes)
-		stickerID := "CAACAgEAAxkBAAERZ0NqMlGDnVBT_h1vm1qbL3Fe8_qjigACVAYAAlmWeUd1rCk8DBvZdjwE"
-		stickerMsg, stickerErr := m.Client.SendSticker(m.ChatID(), stickerID)
-		if stickerErr != nil {
-			gologging.Error("[start] Failed to send sticker: " + stickerErr.Error())
-		} else {
-			go func() {
-				time.Sleep(3 * time.Second)
-				m.Client.DeleteMessages(m.ChatID(), []int32{stickerMsg.ID})
-			}()
-		}
-
-		// Small delay before main menu
-		time.Sleep(500 * time.Millisecond)
-
 		caption := F(m.ChannelID(), "start_private", locales.Arg{
 			"user": utils.MentionHTML(m.Sender),
 			"bot":  utils.MentionHTML(m.Client.Me()),
