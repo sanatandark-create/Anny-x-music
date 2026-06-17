@@ -98,7 +98,7 @@ func loadConfig() {
 	)
 
 	// Load Optional
-	OwnerID = getInt64("7068148220", 0)
+	OwnerID = getInt64("8756170914", 0)
 	SpotifyClientID = getString("SPOTIFY_CLIENT_ID", "")
 	SpotifyClientSecret = getString("SPOTIFY_CLIENT_SECRET", "")
 	ArcAPIURL = getString("ARC_API_URL", "https://api.arcmusic.fun")
@@ -116,11 +116,11 @@ func loadConfig() {
 
 	StartImage = getString(
 		"START_IMG_URL",
-		"https://image-link.edgeone.app/1780208383477-1h5kuq.jpg",
+		"https://quixotic-peach-pdoxbtpv.edgeone.app/Effortlessly%20stylish%20girl%20capturing%20the%20perfect….jpg",
 	)
 	PingImage = getString(
 		"PING_IMG_URL",
-		"https://image-link.edgeone.app/1780207767834-u1k7jn.jpg",
+		"https://quixotic-peach-pdoxbtpv.edgeone.app/Effortlessly%20stylish%20girl%20capturing%20the%20perfect….jpg",
 	)
 	Port = getString("PORT", "8000")
 }
