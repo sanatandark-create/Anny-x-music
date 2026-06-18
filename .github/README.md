@@ -161,8 +161,7 @@ YukkiMusic uses a **modular platform system** to support multiple music sources:
 1. **Telegram** (Priority: 100) - Direct Telegram audio/video files
 2. **YouTube** (Priority: 90) - YouTube videos and playlists
 3. **Youtubify API** (Priority: 80) - Premium YouTube downloads
-4. **Arc API** (Priority: 75) - YouTube downloads via Arc API. [🌟 Register and start your free trial now! 🌟](https://portal.arcmusic.fun/register)
-5. **YT-DLP** (Priority: 70) - Direct yt-dlp integration
+4. **YT-DLP** (Priority: 70) - Direct yt-dlp integration
 
 ### How It Works
 - When you request a song, the bot checks each platform by **priority**
