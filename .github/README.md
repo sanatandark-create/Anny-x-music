@@ -1,4 +1,4 @@
-<h1 align="center">🎧 <b>ArcMusic</b>(<a href="https://telegram.dog/ArcTunesBot">@ArcTunesBot</a>)</h1>
+<h1 align="center">🎧 <b>AnnyMusic</b>(<a href="https://telegram.dog/ArcTunesBot">@Oye_Billoxmusic_bot</a>)</h1>
 
 <p align="center">
   <b>Telegram Group Calls Streaming Bot</b><br>
@@ -75,7 +75,6 @@ vi .env # Edit .env with your credentials
 - **API ID & Hash**: Visit [my.telegram.org](https://my.telegram.org)
 - **Session String**: Use [@StringFatherBot](https://t.me/StringFatherBot) or online generator
 - **MongoDB**: Free tier at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
-- **API Key**: Visit [Arc API Dashboard](https://portal.arcmusic.fun/register)
 
 5. **Start the Bot**
 ```bash
